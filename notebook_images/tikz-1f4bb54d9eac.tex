@@ -1,0 +1,144 @@
+\documentclass[tikz,border=4pt]{standalone}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+
+\usetikzlibrary{
+    arrows,
+    arrows.meta,
+    automata,
+    backgrounds,
+    calc,
+    decorations.pathreplacing,
+    fit,
+    matrix,
+    positioning,
+    shapes,
+    shapes.arrows,
+    shapes.geometric,
+    shapes.multipart
+}
+
+
+
+\tikzset{
+  start/.style={
+    rectangle,
+    rounded corners,
+    minimum width=3.5cm,
+    minimum height=1cm,
+    text centered,
+    text width=3cm,
+    draw=black,
+    fill=green!20
+  },
+  stop/.style={
+    rectangle,
+    rounded corners,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=2.5cm,
+    draw=black,
+    fill=red!20
+  },
+  decision/.style={
+    diamond,
+    aspect=2,
+    minimum width=3cm,
+    minimum height=1.2cm,
+    text centered,
+    text width=2.5cm,
+    inner sep=1pt,
+    draw=black,
+    fill=yellow!20
+  },
+  process/.style={
+    rectangle,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=2.7cm,
+    draw=black,
+    fill=blue!10
+  },
+  arrow/.style={
+    thick,
+    -{Stealth}
+  }
+}
+
+
+\usetikzlibrary{
+  arrows.meta,
+  positioning,
+  shapes.geometric
+}
+
+\tikzset{
+  start/.style={
+    rectangle,
+    rounded corners,
+    minimum width=3.5cm,
+    minimum height=1cm,
+    text centered,
+    text width=3cm,
+    draw=black,
+    fill=green!20
+  },
+  stop/.style={
+    rectangle,
+    rounded corners,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=2.5cm,
+    draw=black,
+    fill=red!20
+  },
+  decision/.style={
+    diamond,
+    aspect=2,
+    minimum width=3cm,
+    minimum height=1.2cm,
+    text centered,
+    text width=2.5cm,
+    inner sep=1pt,
+    draw=black,
+    fill=yellow!20
+  },
+  io/.style={
+    trapezium,
+    trapezium left angle=70,
+    trapezium right angle=110,
+    minimum width=3.5cm,
+    minimum height=1cm,
+    text centered,
+    text width=3cm,
+    draw=black,
+    fill=blue!20
+  },
+  arrow/.style={
+    thick,
+    -{Stealth}
+  }
+}
+
+\input{../jpk.inc}
+
+
+\begin{document}
+
+\begin{tikzpicture}[scale=2]
+			\draw[->] (-1.5,0) -- (1.5,0);
+\draw[->] (0,-1.5) -- (0,1.5);
+\draw (-0.13, 1.5) node{$y$};
+\draw (1.5, -0.13) node{$x$};
+ \draw [<-] (0.05, 0.05) -- (0.45, 0.45); 
+\draw (0.4, 0.5) node[right=1pt] {origo};
+ 		\end{tikzpicture}
+
+\end{document}
